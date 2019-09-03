@@ -1,0 +1,11 @@
+p {
+    margin: 0;
+}
+.address-paragraph {
+    margin-bottom: 10px;
+}
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

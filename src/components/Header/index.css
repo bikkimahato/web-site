@@ -1,0 +1,15 @@
+/* .collection {
+    display: none;
+} */
+
+.image-slideshow {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.collection{
+    width: 20%;
+}

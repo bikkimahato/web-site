@@ -1,0 +1,9 @@
+.images-class {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .both {
+    margin: 5px 5px;
+} */
+

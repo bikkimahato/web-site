@@ -6,6 +6,7 @@
     perspective: 1000px;
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 12px;
   }
   
   .flip-box-inner {
@@ -15,6 +16,7 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    border-radius: 12px;
   }
   
   .flip-box:hover .flip-box-inner {
@@ -27,6 +29,7 @@
     height: 100%;
     backface-visibility: hidden;
     overflow: auto;
+    border-radius: 12px;
   }
   
   .flip-box-front {

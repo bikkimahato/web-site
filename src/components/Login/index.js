@@ -24,7 +24,7 @@ class Login extends React.Component {
     }
 
     validateHandler = () => {
-        let { defaultCredentials, userCredential } = this.state
+        const { defaultCredentials, userCredential } = this.state
 
         return ((defaultCredentials.username === userCredential.username) && (defaultCredentials.password === userCredential.password)) ?
             alert('Login Successful') :
@@ -55,7 +55,7 @@ class Login extends React.Component {
                     </div>
 
                     <div className="container" style={{ backgroundColor: "#f1f1f1" }}>
-                        <button type="button" className="registerbtn">Register</button>
+                        <Link to='/register'><button type="button" className="registerbtn">Register</button></Link>
                         <span className="psw"><Link to='/'>Home </Link></span>
                     </div>
                 </form>

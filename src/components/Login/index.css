@@ -3,7 +3,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 
@@ -35,7 +34,7 @@ button:hover {
 .registerbtn {
   width: auto;
   padding: 10px 18px;
-  background-color: #f44336;
+  background-color: #f44336 ;
 }
 
 .imgcontainer {

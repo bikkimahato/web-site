@@ -17,25 +17,30 @@ class Register extends React.Component {
 
 
     handleChange(e) {
-        let fields = this.state.fields;
+        var fields = this.state.fields;
         fields[e.target.name] = e.target.value;
         this.setState({
             fields
         });
     }
 
+
     submituserRegistrationForm(e) {
         e.preventDefault();
         if (this.validateForm()) {
             let fields = {};
-            fields["username"] = "";
-            fields["emailid"] = "";
-            fields["mobileno"] = "";
-            fields["password"] = "";
-            this.setState({ fields: fields });
+            // fields["username"] = "";
+            // fields["emailid"] = "";
+            // fields["mobileno"] = "";
+            // fields["password"] = "";
+            
+
+            this.setState({ fields: {} });
             alert("Form submitted");
         }
     }
+
+
 
     validateForm() {
 
@@ -93,15 +98,20 @@ class Register extends React.Component {
             }
         }
 
+        if(!fields['gender']){
+            formIsValid = false;
+            errors["gender"] = "*Please select gender."
+        }
+
         this.setState({
             errors: errors
         });
         return formIsValid;
-
-
     }
 
     render() {
+
+        console.log(this.state.fields)
 
         return (
             <div className={style1.registerClass}>
@@ -112,7 +122,7 @@ class Register extends React.Component {
                         <hr />
 
                         <label><b>Name</b></label>
-                        <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange.bind(this)} />
+                        <input title="Stupid" type="text" name="username" value={this.state.fields.username} onChange={this.handleChange.bind(this)} />
                         <div className={style1.errorMsg}>{this.state.errors.username}</div>
 
                         <label><b>Email ID:</b></label>
@@ -126,6 +136,14 @@ class Register extends React.Component {
                         <label><b>Password</b></label>
                         <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange.bind(this)} />
                         <div className={style1.errorMsg}>{this.state.errors.password}</div>
+
+                        <div className={style1.genderStyle}>
+                            <label><b>Gender:</b></label>
+                            <input type="radio" name="gender" value="male" onChange={this.handleChange.bind(this)} /> Male<br />
+                            <input type="radio" name="gender" value="female" onChange={this.handleChange.bind(this)} /> Female<br />
+                            <input type="radio" name="gender" value="other" onChange={this.handleChange.bind(this)} /> Other
+                        </div>
+                        <div className={style1.errorMsg}>{this.state.errors.gender}</div>
 
                         <hr />
                         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>

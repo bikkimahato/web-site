@@ -1,9 +1,9 @@
 .registerClass {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  /* top: 50%; */
+  left: 25%;
+  /* transform: translate(-50%, -50%); */
+  width: 50%;
 }
   
   .container {
@@ -57,3 +57,13 @@
     color: #cc0000;
     margin-bottom: 12px;
   }
+
+
+
+  .genderStyle {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+  }
+  

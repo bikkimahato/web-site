@@ -25,11 +25,15 @@ class Login extends React.Component {
 
     validateHandler = () => {
         const { defaultCredentials, userCredential } = this.state
-
-        return ((defaultCredentials.username === userCredential.username) && (defaultCredentials.password === userCredential.password)) ?
-            alert('Login Successful') :
+        const {history} = this.props
+        
+        if((defaultCredentials.username === userCredential.username) && (defaultCredentials.password === userCredential.password)) {
+            history.push('/dashboard')
+            alert('Login Successful')
+        }
+        else {
             alert('Username or Password incorrect')
-
+        }
     }
 
     render() {

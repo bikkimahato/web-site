@@ -1,0 +1,25 @@
+ .menu-section {
+     width: 30%;
+     background: rgb(78, 71, 61);
+     margin: 8px;
+ }
+.menu-list {
+    list-style-type: none;
+    margin: 8px;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+.list-items {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background: rgb(78, 71, 61);
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  li :hover:not(.active) {
+    background-color: rgb(241, 119, 4);
+    color: white;
+  }

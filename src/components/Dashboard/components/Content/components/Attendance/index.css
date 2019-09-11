@@ -1,0 +1,20 @@
+.year-month-display {
+    display: flex;
+}
+.display-date{
+    display: flex;
+}
+
+.input-display {
+    width: 8px;
+    margin: 5px;
+}
+
+table#t01 {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+ }
+ table#t01 td {
+    border: 1px solid black;
+ }
